@@ -1,25 +1,15 @@
-import './App.css';
-import React, { useState } from "react";
-import StudentForm from "./components/StudentForm";
+import React from "react";
 import StudentList from "./components/StudentList";
+import StudentForm from "./components/StudentForm";
 
 const App = () => {
-  const [students, setStudents] = useState([]);
-
-  const addStudent = (student) => {
-    setStudents([...students, student]);
-  };
-
   return (
-    <div className="App">
-      <h1>Student ID: 101513630</h1>
-      <h1>Student Name: Donya Barakzai </h1>
-      <h1>Student Information System</h1>
-      <h5>Powered By: moxDroid Labs Inc. || DevOps</h5>
-      <StudentForm addStudent={addStudent} />
-      Developerd By: Donya Barakzai 
-      <StudentList students={students} />
+    <div>
+      <h1>Student Management</h1>
+      <StudentForm />
+      <StudentList />
     </div>
   );
 };
 
+export default App; // Ensure App is exported
